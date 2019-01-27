@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+        <div class="header">
+            <h2>
+                CONTATOS DAS EMPRESAS DA CIDADE PAULISTANA
+                <small>Basic example without any additional modification classes</small>
+            </h2>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>NOME</th>
+                        <th>CNPJ</th>
+                        <th>ENDEREÇO</th>
+                        <!--<td> <th>DESCRIÇÃO</th></td>-->
+                        <th>DETALHES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for empresa in empresas %}
+                    <tr>
+                        <td>{{empresa.nome}}</td>
+                        <td>{{empresa.cnpj}}</td>
+                        <!--<td>{{empresa.descricao}}</td>-->
+                        <td>{{empresa.contato}}</td>
+                        <td>
+                            <a href="/contatos/empresas/{{empresa.id}}"> Ver </td>
+                    </tr>
+                    {% endfor%}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td id="rodape">
+                            <p>Foram encontrados {{empresas| length}} Cadastrado!!</p>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+{%endblock%}
