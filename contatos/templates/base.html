@@ -33,7 +33,7 @@
     <link href="{% static 'css/themes/all-themes.css' %}" rel="stylesheet" />
 </head>
 
-<body class="theme-red">
+<body class="theme-blue">
     <div class="search-bar">
         <div class="search-icon">
             <i class="material-icons">Pesquisar</i>
@@ -90,6 +90,12 @@
                         </a>
                     </li>
                     <li class="active">
+                        <a href="/contatos/empresas/form">
+                            <i class="material-icons">text_fields</i>
+                            <span> Cadastrar Empresa</span>
+                        </a>
+                    </li>
+                    <li class="active">
                         <a href="/contatos/contato/">
                             <i class="material-icons">layers</i>
                             <span>contatos</span>
@@ -116,7 +122,8 @@
             <section class="content">
                 <div class="container-fluid">
                     <div class="block-header">
-                        {% block home %} {%endblock%} {% block content %} {%endblock%} {% block a %} {%endblock%} {% block contato %} {%endblock%}
+                       {% block content %} 
+                       {%endblock%} 
                     </div>
 
                     <!-- Widgets -->

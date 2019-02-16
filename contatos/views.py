@@ -1,6 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from .models import Empresa
+from .forms import EmpresaForm
 
 # Create your views here.
 
@@ -15,6 +15,20 @@ def empresa_show(request, empresa_id):
     empresa = Empresa.objects.get(pk=empresa_id)
     return render(request, 'empresas/show.html',{'empresa':empresa})  
 
+def empresa_form(request): 
+    if (request.method == 'POST'):
+        form = EmpresaForm(request.POST)
+        if (form.is_valid()):
+            form.save() 
+            return redirect('/contatos/empresas')          
+        else:
+            return render(request,'empresas/form.html', {'form':form})
+    else:
+        form = EmpresaForm()
+        return render(request,'empresas/form.html', {'form': form}) 
+
+
 def contato_show(request):
     return render(request, 'contato/show.html',{})
+
 

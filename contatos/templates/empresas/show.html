@@ -1,14 +1,5 @@
-{% extends "base.html" %} {% block home %}
-<div class="col-12 col-md-12 col-lg-12">
-    <img src="https://www.comunilog.com/sites/default/files/empresas-multinacionales-min-e1490192574587.jpg" class="card-img-top"
-        alt="...">
-    <div class="card-body">
-        <h5 class="card-title">DETALJHE DA EMPRESA</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little
-            bit longer.</p>
-    </div>
-</div>
-<form>
+{% extends "base.html" %} {% block content %}
+<!--<form>
     <div class="form-group">
         <label for="exampleFormControlInput1">NOME DA EMPRESA</label>
         <output name="sumresult">{{empresa.nome}}</output>
@@ -29,5 +20,51 @@
         <label for="exampleFormControlInput1">DESCRIÇÃO</label>
         <output name="sumresult">{{empresa.descricao}}</output>
     </div>
-</form>
-{%endblock%}
+</form>-->
+<!-- Basic Validation -->
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <img src="https://www.comunilog.com/sites/default/files/empresas-multinacionales-min-e1490192574587.jpg" class="card-img-top"
+                    alt="...">
+                <h2>DETALHE DA EMPRESA</h2>
+            </div>
+            <div class="body">
+                <form id="form_validation" method="POST">
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <label for="exampleFormControlInput1">NOME DA EMPRESA</label>
+                            <output name="sumresult">{{empresa.nome}}</output>
+                        </div>
+                    </div>
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <label for="exampleFormControlInput1">CNPJ</label>
+                            <output name="sumresult">{{empresa.cnpj}}</output>
+                        </div>
+                    </div>
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <label for="exampleFormControlInput1">ENDEREÇO</label>
+                            <output name="sumresult">{{empresa.endereco}}</output>
+                        </div>
+                    </div>
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <label for="exampleFormControlInput1">TELEFONE</label>
+                            <output name="sumresult">{{empresa.contato}}</output>
+                        </div>
+                    </div>
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <label for="exampleFormControlInput1">DESCRIÇÃO</label>
+                            <output name="sumresult">{{empresa.descricao}}</output>
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #END# Basic Validation -->
+    {%endblock%}
