@@ -48,7 +48,8 @@
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="javascript:void(1);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar-collapse" aria-expanded="true"></a>
+                <a href="javascript:void(1);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar-collapse"
+                    aria-expanded="true"></a>
                 <a href="javascript:void(1);" class="bars"></a>
                 <a class="navbar-brand" href="/contatos/"> Agenda de Contatos</a>
             </div>
@@ -83,18 +84,29 @@
                             <span>Home</span>
                         </a>
                     </li>
+                
                     <li class="active">
-                        <a href="/contatos/empresas/">
-                            <i class="material-icons">text_fields</i>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">swap_calls</i>
                             <span>Empresas</span>
                         </a>
+                        <ul class="ml-menu">
+                            <li class="active">
+                                <a href="/contatos/empresas/">
+                                    <i class="material-icons">text_fields</i>
+                                    <span>Listar</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/contatos/empresas/form">
+                                    <i class="material-icons">text_fields</i>
+                                    <span> Cadastrar Empresa</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </li>
-                    <li class="active">
-                        <a href="/contatos/empresas/form">
-                            <i class="material-icons">text_fields</i>
-                            <span> Cadastrar Empresa</span>
-                        </a>
-                    </li>
+                    
                     <li class="active">
                         <a href="/contatos/contato/">
                             <i class="material-icons">layers</i>
@@ -122,8 +134,8 @@
             <section class="content">
                 <div class="container-fluid">
                     <div class="block-header">
-                       {% block content %} 
-                       {%endblock%} 
+                        {% block content %}
+                        {%endblock%}
                     </div>
 
                     <!-- Widgets -->

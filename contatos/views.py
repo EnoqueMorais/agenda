@@ -27,6 +27,23 @@ def empresa_form(request):
         form = EmpresaForm()
         return render(request,'empresas/form.html', {'form': form}) 
 
+def empresa_edit(request, empresa_id):
+    if (request.method == 'POST'):
+        empresa = Empresa.objects.get(pk=empresa_id)
+        form = EmpresaForm(request.POST, instance=empresa)
+        if (form.is_valid()):
+            form.save() 
+            return redirect('/contatos/empresas/')          
+        else:
+            return render(request,'empresas/edit.html', {'form': form, 'empresa_id':empresa_id})
+    else:
+        empresa = Empresa.objects.get(pk=empresa_id)
+        form = EmpresaForm(instance=empresa)
+        return render(request, 'empresas/edit.html',{'form': form, 'empresa_id':empresa_id})
+
+
+
+ 
 
 def contato_show(request):
     return render(request, 'contato/show.html',{})
