@@ -24,17 +24,14 @@
                         <td>{{empresa.cnpj}}</td>
                         <!--<td>{{empresa.descricao}}</td>-->
                         <td>{{empresa.contato}}</td>
-                        <td>
-                            <a href="/contatos/empresas/{{empresa.id}}"> Ver   
-                            <a href="/contatos/empresas/{{empresa.id}}/edit/"> Editar
-                        </td>
+                        <td><a href="/contatos/empresas/{{empresa.id}}"> Ver </td>
                     </tr>
                     {% endfor%}
                 </tbody>
                 <tfoot>
                     <tr>
                         <td id="rodape">
-                            <p>Foram encontrados {{empresas| length}} Cadastrado!!</p>
+                            <p>Foram encontrados {{empresas| length}} empresas Cadastradas!!</p>
                         </td>
                     </tr>
                 </tfoot>

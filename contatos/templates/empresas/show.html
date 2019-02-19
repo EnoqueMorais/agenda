@@ -26,8 +26,8 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
             <div class="header">
-                <img src="https://www.comunilog.com/sites/default/files/empresas-multinacionales-min-e1490192574587.jpg" class="card-img-top"
-                    alt="...">
+                <img src="https://www.comunilog.com/sites/default/files/empresas-multinacionales-min-e1490192574587.jpg"
+                    class="card-img-top" alt="...">
                 <h2>DETALHE DA EMPRESA</h2>
             </div>
             <div class="body">
@@ -61,10 +61,15 @@
                             <label for="exampleFormControlInput1">DESCRIÇÃO</label>
                             <output name="sumresult">{{empresa.descricao}}</output>
                         </div>
+                    </div>
+                    <div>
+                            <a href="/contatos/empresas/{{empresa.id}}/edit/" class="btn btn-primary" role="button">EDITAR</a>
+                        <a href="/contatos/empresas/" class="btn btn-primary" role="button">CANCELAR</a>
+                    </div>
                 </form>
-                </div>
             </div>
         </div>
     </div>
-    <!-- #END# Basic Validation -->
-    {%endblock%}
+</div>
+<!-- #END# Basic Validation -->
+{%endblock%}
